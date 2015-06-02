@@ -11,8 +11,8 @@ defmodule Throttle.BucketSupervisor do
     supervise [], strategy: :one_for_one
   end
 
-  def add(sup, burst_limit) do
-    {:ok, bucket} = Supervisor.start_child(sup, worker(Throttle.Bucket, [burst_limit]))
+  def add(sup, burst_limit, ip) do
+    {:ok, bucket} = Supervisor.start_child(sup, worker(Throttle.Bucket, [burst_limit], id: "bucket_#{ip}"))
     bucket
   end
 

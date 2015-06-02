@@ -43,7 +43,6 @@ defmodule BucketManagerTest do
     assert :ok == BucketManager.register_hit("1.2.3.5", manager)
     assert :ok == BucketManager.register_hit("1.2.3.2", manager)
     assert :error == BucketManager.register_hit("1.2.3.5", manager)
-    assert :ok == BucketManager.register_hit("1.2.3.5", manager)
     assert :ok == BucketManager.register_hit("1.2.3.1", manager)
 
     sup |> Process.exit(:kill)

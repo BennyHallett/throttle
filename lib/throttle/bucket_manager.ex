@@ -20,7 +20,7 @@ defmodule Throttle.BucketManager do
   end
 
   defp _register_hit(nil, dict, ip_address, sup, burst_limit) do
-    bucket = Throttle.BucketSupervisor.add(sup, burst_limit)
+    bucket = Throttle.BucketSupervisor.add(sup, burst_limit, ip_address)
     dict = dict |> Dict.put(ip_address, bucket)
     result = bucket |> Throttle.Bucket.fill
     { result, dict }
