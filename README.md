@@ -16,7 +16,9 @@ Still a work in progress
 * --Bucket Manager--
 * --Fail Over Storage--
 * Recovery of Failed Buckets
-* Buckets Leaking at an interval
+* --Timer--
+* Register buckets with timer
+* Start timer as part of the OTP app
 * Plug
 * Buckets should probably disappear if they leak completely
 * Deploy to Hex
