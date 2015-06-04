@@ -18,7 +18,7 @@ Still a work in progress
 * Recovery of Failed Buckets
 * --Timer--
 * Register buckets with timer
-* Start timer as part of the OTP app
+* -- Start timer as part of the OTP app --
 * Plug
 * Buckets should probably disappear if they leak completely
 * Deploy to Hex

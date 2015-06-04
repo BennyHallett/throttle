@@ -2,6 +2,7 @@ defmodule Throttle.Timer do
   import Logger
 
   def start_link(interval = {amount, scale}) do
+    Logger.debug "Starting logger with interval every #{amount} #{to_string scale}"
     i = Throttle.TimeConverter.convert(interval)
 
     pid = spawn(__MODULE__, :timer, [i, []])

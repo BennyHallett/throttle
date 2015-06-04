@@ -13,7 +13,7 @@ defmodule Throttle.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [applications: [:logger],
-     mod: {Throttle, [10]}]
+     mod: {Throttle, [10, {10, :seconds}]}]
   end
 
   # Dependencies can be Hex packages:
