@@ -15,11 +15,11 @@ Still a work in progress
 * --Supervision Tree--
 * --Bucket Manager--
 * --Fail Over Storage--
-* Recovery of Failed Buckets
 * --Timer--
-* Register buckets with timer
 * -- Start timer as part of the OTP app --
+* -- Register buckets with timer --
 * Plug
+* Recovery of Failed Buckets
 * Buckets should probably disappear if they leak completely
 * Deploy to Hex
 * Update README with usage details

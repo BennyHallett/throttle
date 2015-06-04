@@ -24,7 +24,7 @@ defmodule Throttle.Timer do
         Logger.debug "Leaking for #{length buckets} buckets"
 
         Enum.each buckets, fn bucket ->
-          Throttle.Bucket.leak
+          bucket |> Throttle.Bucket.leak
         end
         timer(interval, buckets)
     end

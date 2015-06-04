@@ -10,7 +10,9 @@ defmodule Throttle.Bucket do
   more info see: http://en.wikipedia.org/wiki/Leaky_bucket
   """
   def start_link(burst_limit) do
-    Agent.start_link(fn -> { 0, burst_limit } end)
+    {:ok, pid} = Agent.start_link(fn -> { 0, burst_limit } end)
+    Throttle.Timer.register pid
+    {:ok, pid}
   end
 
   @doc """
